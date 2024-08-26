@@ -14,9 +14,15 @@ void setup() {
   delay(100);
 
   ledcAttachPin(BUZZ, BUZZ_CHANNEL);
+  ledcWriteNote(BUZZ_CHANNEL, NOTE_C, octave);
+  delay(500);
+  ledcWriteNote(BUZZ_CHANNEL, NOTE_D, octave);
+  delay(500);
+  ledcWriteNote(BUZZ_CHANNEL, NOTE_E, octave);
+  delay(500);
+  noTone(BUZZ_CHANNEL);
 }
 
 void loop() {
-  ledcWriteNote(BUZZ_CHANNEL, NOTE_C, octave);
-  delay(500);
+  //
 }
